@@ -37,3 +37,28 @@ Attribute "windowNoTitle" will be used on SDK 23 or newer.
 
 
 
+3. 侧滑菜单的实现
+布局文件的根是 android.support.v4.widget.DrawerLayout,包含两部分，一部分是显示内容显示区域，一部分是菜单。
+并且，在代码位置上，菜单部分，必须在内容显示区域的下面,如下：
+<android.support.v4.widget.DrawerLayo
+    ...
+    >
+    <!-- 下面是内容显示区域 -->
+    <LinearLayout
+        ...
+        >
+        ...
+    </LinearLayout>
+    
+    
+    <!-- 下面是内容测边菜单区域，一定要包含一个属性
+    android:layout_gravity="start" 标识这该部分为侧滑部分 -->
+    <LinearLayout
+        ...
+        android:layout_gravity="start"
+        >
+        ...
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

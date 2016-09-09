@@ -21,6 +21,7 @@
 
     </LinearLayout>
 
+    <!--android:layout_gravity="start" 使下面一部分作为侧滑部分.这部分一定要放在下面-->
     <LinearLayout
         android:id="@+id/llMenu"
         android:layout_width="match_parent"
